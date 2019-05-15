@@ -18,7 +18,7 @@ warnings.simplefilter('ignore')
 
 ######################################################################
 # Download and plot an individual-level statistical map and plot it on the
-# subject's T1 image
+# subject's T1 image:
 
 from nilearn import datasets, plotting
 localizer = datasets.fetch_localizer_button_task()
@@ -26,14 +26,19 @@ plotting.view_img(localizer['tmap'], bg_img=localizer['anat'], threshold='97%')
 
 
 ######################################################################
-# Download and plot a group-level statistical map
+# Download and plot a group-level statistical map:
 
 img = datasets.fetch_neurovault_motor_task()['images'][0]
 plotting.view_img(img, threshold='95%')
 
 
 ######################################################################
-# Static plots that can be saved in a variety of formats
+# More about dataset downloaders: https://nilearn.github.io/modules/reference.html#module-nilearn.datasets
+#
+# More about plotting: https://nilearn.github.io/plotting/index.html
+
+######################################################################
+# Static plots that can be saved in a variety of formats:
 
 plotting.plot_stat_map(img, threshold=3)
 
@@ -79,7 +84,8 @@ plotting.view_surf(fsaverage['pial_left'], surf_destrieux['map_left'],
 
 
 ######################################################################
- # not needed with master
+
+# not needed with master
 from nilearn import surface
 fsaverage['sulc_left'] = surface.load_surf_data(fsaverage['sulc_left'])
 
