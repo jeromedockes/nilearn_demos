@@ -39,7 +39,8 @@ plotting.plot_stat_map(img, threshold=3)
 
 
 ######################################################################
-plotting.plot_stat_map(img, cut_coords=[-18, 64], display_mode='z', threshold=3.)
+plotting.plot_stat_map(
+    img, cut_coords=[-18, 64], display_mode='z', threshold=3.)
 
 
 ######################################################################
