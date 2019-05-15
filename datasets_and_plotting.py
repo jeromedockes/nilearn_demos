@@ -80,7 +80,7 @@ plotting.plot_prob_atlas(harvard_oxford['maps'])
 surf_destrieux = datasets.fetch_atlas_surf_destrieux()
 fsaverage = datasets.fetch_surf_fsaverage()
 plotting.view_surf(fsaverage['pial_left'], surf_destrieux['map_left'],
-                   cmap='gist_ncar')
+                   cmap='gist_ncar', colorbar=False)
 
 
 ######################################################################
@@ -91,5 +91,11 @@ fsaverage['sulc_left'] = surface.load_surf_data(fsaverage['sulc_left'])
 
 
 ######################################################################
+plotting.view_surf(fsaverage['pial_left'], fsaverage['sulc_left'],
+                   cmap='Greys', threshold=None, symmetric_cmap=False,
+                   colorbar=False)
+
+######################################################################
 plotting.view_surf(fsaverage['infl_left'], fsaverage['sulc_left'],
-                   cmap='Greys', threshold=None, symmetric_cmap=False)
+                   cmap='Greys', threshold=None, symmetric_cmap=False,
+                   colorbar=False)
