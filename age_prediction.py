@@ -67,7 +67,7 @@ gs = GridSearchCV(pipe, param_grid, scoring='accuracy', cv=cv, verbose=1,
 
 ######################################################################
 # fit grid search
-gs.fit(pooled_subjects, classes, groups=groups)
+gs.fit(pooled_subjects, classes)
 mean_scores = gs.cv_results_['mean_test_score']
 scores_std = gs.cv_results_['std_test_score']
 
