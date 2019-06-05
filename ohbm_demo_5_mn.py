@@ -36,7 +36,7 @@ plotting.plot_stat_map(
 ######################################################################
 # Projections on the cortical surface
 
-plotting.view_img_on_surf(img, threshold='95%', surf_mesh='fsaverage5')
+plotting.view_img_on_surf(img, threshold='95%')
 
 ######################################################################
 # More about dataset downloaders: https://nilearn.github.io/modules/reference.html#module-nilearn.datasets
