@@ -72,7 +72,7 @@ print('number of regions in MSDL atlas:', len(msdl.labels))
 
 masker = NiftiMapsMasker(
     msdl.maps, resampling_target="data", t_r=2, detrend=True,
-    low_pass=.1, high_pass=.01, memory='nilearn_cache').fit([])
+    low_pass=.1, high_pass=.01, memory='nilearn_cache', memory_level=3).fit([])
 masked_data = [masker.transform(func, confounds) for
                (func, confounds) in zip(rest_data.func, rest_data.confounds)]
 masked_data = np.asarray(masked_data)
