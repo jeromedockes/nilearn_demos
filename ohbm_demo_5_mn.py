@@ -29,6 +29,9 @@ from nilearn import plotting
 plotting.view_img(img, threshold='95%')
 
 ######################################################################
+# Made with the brainsprite viewer: https://github.com/SIMEXP/brainsprite.js
+
+######################################################################
 view = plotting.view_img(img, threshold='95%')
 view.open_in_browser()
 
@@ -95,6 +98,7 @@ plotting.view_connectome(
 ###############################################################################
 # Age group classification with scikit-learn
 # ------------------------------------------
+# `ConnectivityMeasure` can be used to extract features for supervised learning
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.preprocessing import LabelEncoder
@@ -116,3 +120,10 @@ print(np.mean(scores))
 import seaborn as sns
 sns.violinplot(scores)
 sns.stripplot(scores, color='k')
+
+###############################################################################
+# More about connectivity with nilearn: https://nilearn.github.io/connectivity/index.html
+#
+# More about the development dataset:
+# Richardson et al. (2018). Development of the social brain from age three to
+# twelve years.
